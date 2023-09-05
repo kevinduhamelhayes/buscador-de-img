@@ -1,0 +1,25 @@
+article {
+  display: inline-block;
+  width: 370px;
+  transition: all 0.3s ease-in-out; /* Transición para todos los estilos para una experiencia más fluida */
+  margin: 20px; /* Márgenes uniformes para un mejor espaciado */
+  padding: 10px; /* Espacio interno para un mejor diseño */
+  background-color: #fff;
+  border: 1px solid #e6e6e6; /* Un borde sutil para cuando no hay sombra */
+  border-radius: 5px;
+  cursor: pointer;
+  overflow: hidden; /* Asegura que nada sobresale del borde redondeado */
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); /* Sombra sutil por defecto */
+}
+
+article:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Sombra más prominente en hover */
+  transform: scale(1.02); /* Ligero aumento de tamaño para acentuar el hover */
+}
+
+article img {
+  display: block; /* Elimina el espacio blanco debajo de la imagen */
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}

@@ -1,0 +1,30 @@
+main {
+  display: flex;
+  flex-wrap: wrap; /* Permite que los elementos se ajusten si no hay suficiente espacio */
+  background: #eee;
+  padding: 20px;
+  justify-content: center;
+  align-items: center; /* Centra los elementos verticalmente */
+  min-height: 100vh; /* Asegura que main ocupe al menos la altura de la pantalla */
+  box-sizing: border-box; /* Asegura que el padding no aumente el tamaño total de main */
+}
+
+.center {
+  column-count: 3;
+  width: 100%; /* Utiliza el ancho completo disponible */
+  max-width: 1200px; /* Ancho máximo para mantener la legibilidad */
+  column-gap: 20px; /* Espacio entre columnas para un mejor diseño */
+}
+
+/* Estilos para pantallas más pequeñas */
+@media (max-width: 1280px) {
+  .center {
+    column-count: 2; /* Solo 2 columnas en pantallas más pequeñas */
+  }
+}
+
+@media (max-width: 800px) {
+  .center {
+    column-count: 1; /* Una columna en pantallas aún más pequeñas */
+  }
+}
