@@ -1,30 +1,30 @@
 main {
   display: flex;
-  flex-wrap: wrap; /* Permite que los elementos se ajusten si no hay suficiente espacio */
+  flex-direction: column;  /* Alineación vertical del contenedor */
+  align-items: center;     /* Centra el contenedor `.center` */
   background: #eee;
   padding: 20px;
-  justify-content: center;
-  align-items: center; /* Centra los elementos verticalmente */
-  min-height: 100vh; /* Asegura que main ocupe al menos la altura de la pantalla */
-  box-sizing: border-box; /* Asegura que el padding no aumente el tamaño total de main */
+  min-height: 100vh;       /* Asegura que main ocupe al menos la altura de la pantalla */
+  box-sizing: border-box;  /* Asegura que el padding no aumente el tamaño total de main */
 }
 
 .center {
-  column-count: 3;
-  width: 100%; /* Utiliza el ancho completo disponible */
-  max-width: 1200px; /* Ancho máximo para mantener la legibilidad */
-  column-gap: 20px; /* Espacio entre columnas para un mejor diseño */
+  display: grid;           /* Define el contenedor como grid */
+  grid-template-columns: repeat(3, 1fr); /* Crea tres columnas de igual ancho */
+  gap: 20px;               /* Espaciado entre los elementos del grid */
+  width: 100%;             /* Utiliza el ancho completo disponible */
+  max-width: 1200px;       /* Ancho máximo para mantener la legibilidad */
 }
 
 /* Estilos para pantallas más pequeñas */
 @media (max-width: 1280px) {
   .center {
-    column-count: 2; /* Solo 2 columnas en pantallas más pequeñas */
+    grid-template-columns: repeat(2, 1fr); /* Solo 2 columnas en pantallas más pequeñas */
   }
 }
 
 @media (max-width: 800px) {
   .center {
-    column-count: 1; /* Una columna en pantallas aún más pequeñas */
+    grid-template-columns: 1fr; /* Una columna en pantallas aún más pequeñas */
   }
 }
